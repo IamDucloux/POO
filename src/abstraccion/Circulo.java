@@ -11,6 +11,10 @@
 public class Circulo {
     float radio;
     float area;
+    public Circulo(float r)
+    {
+        radio=r;
+    }
     void calcularArea()
     {
         area=(float) (Math.PI*Math.pow(radio, 2));
