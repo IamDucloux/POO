@@ -11,8 +11,13 @@
 public class SolucionFinal {
     public static void main(String[] args) {
         Circulo x=new Circulo(4);
-        //x.radio=4;
         x.calcularArea();
         System.out.println(x.area);
+        Triangulo y=new Triangulo(2, 3);
+        y.calcularArea();
+        System.out.println(y.area);
+        Rectangulo z=new Rectangulo(5, 6);
+        z.calcularArea();
+        System.out.println(z.area);
     }
 }
