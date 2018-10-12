@@ -6,6 +6,7 @@
 package proyecto;
 
 import java.util.*;
+import javax.swing.JLabel;
 
 /**
  *
@@ -136,7 +137,7 @@ public class Probar {
         preguntas.add(p8);
         preguntas.add(p9);
         for (Pregunta p : preguntas) {
-            System.out.println("\n"+p.getTitulo());
+            System.out.println(p.getTitulo());
             for (Opcion o : p.getOpciones()) {
                 System.out.println(o.getTitulo());
             }
