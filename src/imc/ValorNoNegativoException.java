@@ -9,11 +9,11 @@ package imc;
  *
  * @author T-101
  */
-public class Imc {
-    float valor;
-    
-    void CalcularImc(Persona p)
-    {
-        valor=p.getPeso()/(p.getAltura()*p.getAltura());
+public class ValorNoNegativoException extends Exception{
+
+    public ValorNoNegativoException() {
+        super("No se aceptan valores negativos :( ");
     }
+    
+    
 }
