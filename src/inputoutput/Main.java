@@ -17,9 +17,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             Persistencia p=new Persistencia();
-            p.guardar("Hola Mundo prros");
-            System.out.println("Mensaje Guardado");
-        } catch (IOException ex) {
+//            p.guardar("Hola Mundo prros");
+//            System.out.println("Mensaje Guardado");
+            System.out.println(p.leer());
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
         

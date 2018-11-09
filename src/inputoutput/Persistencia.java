@@ -17,5 +17,16 @@ public class Persistencia {
         oos.writeObject(s);
         oos.close();
         fos.close();
+
+    }
+    
+    public String leer() throws FileNotFoundException, IOException, ClassNotFoundException{
+        File f=new File("Archivaldo");
+        FileInputStream fos= new FileInputStream(f);
+        ObjectInputStream oos= new ObjectInputStream(fos);
+        String x=(String) oos.readObject();
+        oos.close();
+        fos.close();
+        return x;
     }
 }
