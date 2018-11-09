@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package entregable1;
-
 import java.io.Serializable;
 
 /**

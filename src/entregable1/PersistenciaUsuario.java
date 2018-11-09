@@ -36,19 +36,31 @@ public class PersistenciaUsuario {
         File f=new File("Archivaldo");
         FileOutputStream fos= new FileOutputStream(f);
         ObjectOutputStream oos= new ObjectOutputStream(fos);
-        oos.writeObject(a);
+        oos.writeObject(usuarios);
         oos.close();
         fos.close();
     }
     
-    public ArrayList<Usuario> leer() throws FileNotFoundException, IOException{
+    public ArrayList<Usuario> leer() throws FileNotFoundException, IOException, ClassNotFoundException{
         File f=new File("Archivaldo");
         FileInputStream fos= new FileInputStream(f);
         ObjectInputStream oos= new ObjectInputStream(fos);
-        Usuario x=(Usuario) oos.readObject();
+        ArrayList<Usuario> x=(ArrayList<Usuario>) oos.readObject();
         oos.close();
         fos.close();
-        return usuarios;
+        return x;
         
     }
+    
+    public Usuario BuscarPorId(int index) throws FileNotFoundException, IOException, ClassNotFoundException{
+        File f=new File("Archivaldo");
+        FileInputStream fos= new FileInputStream(f);
+        ObjectInputStream oos= new ObjectInputStream(fos);
+        ArrayList<Usuario> x=(ArrayList<Usuario>) oos.readObject();
+        oos.close();
+        fos.close();
+        return x.get(index);
+    }
+    
+    
 }
