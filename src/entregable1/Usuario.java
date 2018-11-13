@@ -19,7 +19,9 @@ public class Usuario implements Serializable{
     public String toString() {
         return "Usuario{" + "nombre=" + nombre + ", edad=" + edad + ", sueldo=" + sueldo + '}';
     }
+
    
+    
 
     public Usuario(String nombre, int edad, float sueldo) {
         this.nombre = nombre;
