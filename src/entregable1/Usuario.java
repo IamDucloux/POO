@@ -14,6 +14,11 @@ public class Usuario implements Serializable{
     private String nombre;
     private int edad;
     private float sueldo;
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nombre=" + nombre + ", edad=" + edad + ", sueldo=" + sueldo + '}';
+    }
    
 
     public Usuario(String nombre, int edad, float sueldo) {

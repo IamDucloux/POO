@@ -31,53 +31,56 @@ public class PersistenciaUsuario {
     }
     
     
-    public void guardar(Usuario a) throws FileNotFoundException, IOException{
-        usuarios.add(a);
-        File f=new File("Archivaldo");
+    public void guardar(Usuario a) throws FileNotFoundException, IOException, ClassNotFoundException{
+        File f=new File("usuarios");
+        if (f.exists()) usuarios=leer();
         FileOutputStream fos= new FileOutputStream(f);
         ObjectOutputStream oos= new ObjectOutputStream(fos);
+        usuarios.add(a);
         oos.writeObject(usuarios);
         oos.close();
         fos.close();
     }
     
     public ArrayList<Usuario> leer() throws FileNotFoundException, IOException, ClassNotFoundException{
-        File f=new File("Archivaldo");
+        File f=new File("usuarios");
         FileInputStream fos= new FileInputStream(f);
         ObjectInputStream oos= new ObjectInputStream(fos);
-        ArrayList<Usuario> x=(ArrayList<Usuario>) oos.readObject();
+        usuarios =(ArrayList<Usuario>) oos.readObject();
         oos.close();
         fos.close();
-        return x;
+        return usuarios;
         
     }
     
-    public Usuario BuscarPorId(int index) throws FileNotFoundException, IOException, ClassNotFoundException{
-        File f=new File("Archivaldo");
+    public Usuario buscarPorId(int index) throws FileNotFoundException, IOException, ClassNotFoundException{
+        File f=new File("usuarios");
         FileInputStream fos= new FileInputStream(f);
         ObjectInputStream oos= new ObjectInputStream(fos);
-        ArrayList<Usuario> x=(ArrayList<Usuario>) oos.readObject();
+        usuarios =(ArrayList<Usuario>) oos.readObject();
         oos.close();
         fos.close();
-        return x.get(index);
+        return usuarios.get(index);
     }
     
     public void borrar(int index) throws FileNotFoundException, ClassNotFoundException, IOException{
-        File f=new File("Archivaldo");
+        File f=new File("usuarios");
+        if (f.exists()) usuarios=leer();
         FileInputStream fos= new FileInputStream(f);
         ObjectInputStream oos= new ObjectInputStream(fos);
-        ArrayList<Usuario> x=(ArrayList<Usuario>) oos.readObject();
-        x.remove(index);
+        usuarios =(ArrayList<Usuario>) oos.readObject();
+        usuarios.remove(index);
         oos.close();
         fos.close();
     }
     
-    public void actualizar(int index, Usuario a) throws FileNotFoundException, IOException {
-        usuarios.set(index, a);
-        File f=new File("Archivaldo");
+    public void actualizar(int index, Usuario a) throws FileNotFoundException, IOException, ClassNotFoundException {
+        File f=new File("usuarios");
+        if (f.exists()) usuarios=leer();
         FileOutputStream fos= new FileOutputStream(f);
         ObjectOutputStream oos= new ObjectOutputStream(fos);
-        oos.writeObject(usuarios);
+        usuarios.set(index, a);
+        oos.writeObject(usuarios.set(index, a));
         oos.close();
         fos.close();
     }

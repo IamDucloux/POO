@@ -15,16 +15,6 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
-        PersistenciaUsuario p= new PersistenciaUsuario();
-        Usuario ian = new Usuario("ian", 21, 2000);
-        p.guardar(ian);
-        Usuario alex=new Usuario("Alex", 20, 2000);
-        p.guardar(alex);
-        Usuario pau=new Usuario("Pau", 20, 5000);
-        p.guardar(pau);
-//        for (Usuario x : p.leer()) {
-//            System.out.println(x.getNombre()+" "+x.getEdad()+" "+x.getSueldo());
-//        }
-        System.out.println(p.BuscarPorId(2).getNombre()+" "+p.BuscarPorId(2).getEdad()+" "+p.BuscarPorId(2).getSueldo());
+        
     }
 }
