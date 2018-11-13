@@ -74,13 +74,12 @@ public class PersistenciaUsuario {
         fos.close();
     }
     
-    public void actualizar(int index, Usuario a) throws FileNotFoundException, IOException, ClassNotFoundException {
+    public void actualizar(int index,Usuario a) throws FileNotFoundException, IOException, ClassNotFoundException {
         File f=new File("usuarios");
-        if (f.exists()) usuarios=leer();
         FileOutputStream fos= new FileOutputStream(f);
         ObjectOutputStream oos= new ObjectOutputStream(fos);
         usuarios.set(index, a);
-        oos.writeObject(usuarios.set(index, a));
+        oos.writeObject(usuarios);
         oos.close();
         fos.close();
     }
