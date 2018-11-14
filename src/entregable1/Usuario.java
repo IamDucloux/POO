@@ -22,7 +22,7 @@ public class Usuario implements Serializable{
 
    
     public Usuario(){
-        nombre="";
+        nombre="null";
         edad=0;
         sueldo=0;
     }
