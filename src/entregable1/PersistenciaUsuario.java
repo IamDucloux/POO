@@ -65,7 +65,6 @@ public class PersistenciaUsuario {
     
     public void borrar(int index) throws FileNotFoundException, ClassNotFoundException, IOException{
         File f=new File("usuarios");
-        if (f.exists()) usuarios=leer();
         FileInputStream fos= new FileInputStream(f);
         ObjectInputStream oos= new ObjectInputStream(fos);
         usuarios =(ArrayList<Usuario>) oos.readObject();
@@ -78,9 +77,8 @@ public class PersistenciaUsuario {
         File f=new File("usuarios");
         FileOutputStream fos= new FileOutputStream(f);
         ObjectOutputStream oos= new ObjectOutputStream(fos);
-        String nombre=usuarios.get(index).getNombre();
-        int edad=usuarios.get(index).getEdad();
-        float sueldo=usuarios.get(index).getSueldo();
+        Usuario x =new Usuario(usuarios.get(index).getNombre(),usuarios.get(index).getEdad(),usuarios.get(index).getSueldo());
+        usuarios.set(index, a);
         oos.writeObject(usuarios);
         oos.close();
         fos.close();

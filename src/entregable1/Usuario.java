@@ -21,7 +21,11 @@ public class Usuario implements Serializable{
     }
 
    
-    
+    public Usuario(){
+        nombre="";
+        edad=0;
+        sueldo=0;
+    }
 
     public Usuario(String nombre, int edad, float sueldo) {
         this.nombre = nombre;
