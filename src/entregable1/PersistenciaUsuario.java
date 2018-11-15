@@ -79,9 +79,11 @@ public class PersistenciaUsuario {
         if (f.exists()) usuarios=leer();
         FileOutputStream fos= new FileOutputStream(f);
         ObjectOutputStream oos= new ObjectOutputStream(fos);
+/*      ***No Necesario***
         if("null".equals(a.getNombre())) a.setNombre(usuarios.get(index).getNombre());
         if(a.getEdad()==0) a.setEdad(usuarios.get(index).getEdad());
         if(a.getSueldo()==0) a.setSueldo(usuarios.get(index).getSueldo());
+*/        
         usuarios.set(index, a);
         oos.close();
         fos.close();
