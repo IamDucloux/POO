@@ -54,6 +54,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jTabbedPane1.setBackground(new java.awt.Color(51, 102, 255));
         jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
         jLabel1.setText("Ventana Guardar Usuarios");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -74,6 +76,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Guardar Usuarios", jPanel1);
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel2.setText("Ventana Buscar todos los Usuarios");
 
@@ -96,6 +100,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Buscar todos", jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+
         jLabel3.setText("Buscar por ID");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -117,6 +123,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Buscar por ID", jPanel4);
 
+        jPanel6.setBackground(new java.awt.Color(204, 204, 204));
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -129,6 +137,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Actualizar", jPanel6);
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
