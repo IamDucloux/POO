@@ -86,6 +86,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -146,7 +147,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 102, 255));
-        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -197,9 +198,9 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(NombreText, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(50, 112, Short.MAX_VALUE)
+                .addGap(50, 113, Short.MAX_VALUE)
                 .addComponent(GuardarB, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(159, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(207, 207, 207)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -236,16 +237,12 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel7.setText("Mostrar todos los usuarios");
 
         MostrarUsuarios.setAutoCreateRowSorter(true);
-        MostrarUsuarios.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
         MostrarUsuarios.setName(""); // NOI18N
         MostrarUsuarios.setOpaque(false);
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, MostrarUsuarios, org.jdesktop.beansbinding.ELProperty.create("${}"), MostrarUsuarios, org.jdesktop.beansbinding.BeanProperty.create("model"));
+        bindingGroup.addBinding(binding);
+
         jScrollPane1.setViewportView(MostrarUsuarios);
 
         Mostrar.setFont(new java.awt.Font("sansserif", 3, 14)); // NOI18N
@@ -264,12 +261,12 @@ public class InterfazUsuario extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(176, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(151, 151, 151))
         );
@@ -572,6 +569,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -611,6 +610,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void nombreActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActualizarActionPerformed
@@ -619,10 +619,14 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
+        Usuario u = new Usuario();
+        
+        
     }//GEN-LAST:event_ActualizarActionPerformed
 
     private void iDActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDActualizarActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_iDActualizarActionPerformed
 
     private void iDEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDEliminarActionPerformed
@@ -715,5 +719,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField nombreActualizar;
     private javax.swing.JTextField sueldoActualizar;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
