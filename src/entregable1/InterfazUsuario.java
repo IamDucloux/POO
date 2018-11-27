@@ -10,6 +10,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -17,7 +20,7 @@ import javax.swing.JPanel;
  */
 public class InterfazUsuario extends javax.swing.JFrame {
     PersistenciaUsuario p;
-    
+    TableModel t;
 
 
     /**
@@ -26,8 +29,54 @@ public class InterfazUsuario extends javax.swing.JFrame {
     public InterfazUsuario() {
         initComponents();
         p = new PersistenciaUsuario();
-        
-    }
+        t=new TableModel() {
+            @Override
+            public int getRowCount() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getColumnCount() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public String getColumnName(int columnIndex) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public Class<?> getColumnClass(int columnIndex) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public Object getValueAt(int rowIndex, int columnIndex) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void addTableModelListener(TableModelListener l) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void removeTableModelListener(TableModelListener l) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        MostrarUsuarios = new JTable(t);
+    }  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -97,7 +146,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 102, 255));
-        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -186,7 +235,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel7.setText("Mostrar todos los usuarios");
 
-        MostrarUsuarios.setAutoCreateColumnsFromModel(false);
         MostrarUsuarios.setAutoCreateRowSorter(true);
         MostrarUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
