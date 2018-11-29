@@ -615,6 +615,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
     private void nombreActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActualizarActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_nombreActualizarActionPerformed
 
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
@@ -626,7 +627,11 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
     private void iDActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDActualizarActionPerformed
         // TODO add your handling code here:
-        
+        if("null".equals(iDActualizar.getText())==false){
+            nombreActualizar.setText(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getNombre());
+            edadActualizar.setText(Integer.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getEdad()));
+            sueldoActualizar.setText(Float.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getSueldo()));
+        }
     }//GEN-LAST:event_iDActualizarActionPerformed
 
     private void iDEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDEliminarActionPerformed
