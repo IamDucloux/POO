@@ -5,7 +5,9 @@
  */
 package entregable1;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -21,60 +23,16 @@ import javax.swing.table.TableModel;
 public class InterfazUsuario extends javax.swing.JFrame {
     PersistenciaUsuario p;
     TableModel t;
-
+    
 
     /**
      * Creates new form InterfazUsuario
      */
-    public InterfazUsuario() {
+    public InterfazUsuario() throws IOException, FileNotFoundException, ClassNotFoundException {
         initComponents();
         p = new PersistenciaUsuario();
-        t=new TableModel() {
-            @Override
-            public int getRowCount() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public int getColumnCount() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public String getColumnName(int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public Class<?> getColumnClass(int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public Object getValueAt(int rowIndex, int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public void addTableModelListener(TableModelListener l) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public void removeTableModelListener(TableModelListener l) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
+        p.usuarios=p.leer();
+//        t=new TableModel();
         MostrarUsuarios = new JTable(t);
     }  
 
@@ -86,7 +44,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -237,12 +194,16 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel7.setText("Mostrar todos los usuarios");
 
         MostrarUsuarios.setAutoCreateRowSorter(true);
+        MostrarUsuarios.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
         MostrarUsuarios.setName(""); // NOI18N
         MostrarUsuarios.setOpaque(false);
-
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, MostrarUsuarios, org.jdesktop.beansbinding.ELProperty.create("${}"), MostrarUsuarios, org.jdesktop.beansbinding.BeanProperty.create("model"));
-        bindingGroup.addBinding(binding);
-
         jScrollPane1.setViewportView(MostrarUsuarios);
 
         Mostrar.setFont(new java.awt.Font("sansserif", 3, 14)); // NOI18N
@@ -403,6 +364,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel11.setText("Nombre");
 
+        nombreActualizar.setEnabled(false);
         nombreActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActualizarActionPerformed(evt);
@@ -412,13 +374,18 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel12.setText("Edad");
 
+        edadActualizar.setEnabled(false);
+
         jLabel13.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel13.setText("Sueldo");
+
+        sueldoActualizar.setEnabled(false);
 
         Actualizar.setFont(new java.awt.Font("sansserif", 3, 14)); // NOI18N
         Actualizar.setText("ACTUALIZAR");
         Actualizar.setToolTipText("Presione aqui para guardar un usuario con los valores insertados previamente");
         Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Actualizar.setEnabled(false);
         Actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ActualizarActionPerformed(evt);
@@ -428,6 +395,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel14.setText("ID");
 
+        iDActualizar.setToolTipText("Ingresa un valor, luego pulsa enter para cargar los valores del usuario ingresado");
         iDActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iDActualizarActionPerformed(evt);
@@ -569,8 +537,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        bindingGroup.bind();
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -621,17 +587,32 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
         Usuario u = new Usuario();
-        
-        
+        u.setNombre(nombreActualizar.getText());
+        u.setEdad(Integer.parseInt(nombreActualizar.getText()));
+        u.setSueldo(Float.parseFloat(nombreActualizar.getText()));
+        if(JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: "+iDActualizar.getText()+"\nCon los datos:\n\n"+u)==1) System.out.println("SI act");
     }//GEN-LAST:event_ActualizarActionPerformed
 
     private void iDActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDActualizarActionPerformed
         // TODO add your handling code here:
-        if("null".equals(iDActualizar.getText())==false){
+        if("".equals(iDActualizar.getText())==false){
             nombreActualizar.setText(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getNombre());
             edadActualizar.setText(Integer.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getEdad()));
             sueldoActualizar.setText(Float.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getSueldo()));
+            Actualizar.setEnabled(true);
+            nombreActualizar.setEnabled(true);
+            edadActualizar.setEnabled(true);
+            sueldoActualizar.setEnabled(true);
+            
         }
+        else{
+            nombreActualizar.setEnabled(false);
+            edadActualizar.setEnabled(false);
+            sueldoActualizar.setEnabled(false);
+            Actualizar.setEnabled(false);
+        }
+        
+            
     }//GEN-LAST:event_iDActualizarActionPerformed
 
     private void iDEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDEliminarActionPerformed
@@ -672,7 +653,13 @@ public class InterfazUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazUsuario().setVisible(true);
+                try {
+                    new InterfazUsuario().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
         
@@ -724,6 +711,5 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField nombreActualizar;
     private javax.swing.JTextField sueldoActualizar;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
