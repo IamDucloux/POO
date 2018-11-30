@@ -21,9 +21,9 @@ import javax.swing.table.TableModel;
  * @author T-101
  */
 public class InterfazUsuario extends javax.swing.JFrame {
+
     PersistenciaUsuario p;
     TableModel t;
-    
 
     /**
      * Creates new form InterfazUsuario
@@ -31,10 +31,10 @@ public class InterfazUsuario extends javax.swing.JFrame {
     public InterfazUsuario() throws IOException, FileNotFoundException, ClassNotFoundException {
         initComponents();
         p = new PersistenciaUsuario();
-        p.usuarios=p.leer();
+        p.usuarios = p.leer();
 //        t=new TableModel();
         MostrarUsuarios = new JTable(t);
-    }  
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -536,7 +536,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private void GuardarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarBActionPerformed
         try {
             // TODO add your handling code here:
-            Usuario u = new Usuario(NombreText.getText(),Integer.parseInt( EdadText.getText()),Float.parseFloat(SueldoText.getText()));
+            Usuario u = new Usuario(NombreText.getText(), Integer.parseInt(EdadText.getText()), Float.parseFloat(SueldoText.getText()));
             p.guardar(u);
             JOptionPane.showMessageDialog(rootPane, "Usuario Guardado");
         } catch (IOException ex) {
@@ -553,7 +553,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private void MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarActionPerformed
         try {
             // TODO add your handling code here:
-            for(Usuario u:p.leer()){
+            for (Usuario u : p.leer()) {
                 System.out.println(u);
             }
         } catch (IOException ex) {
@@ -569,28 +569,35 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         // TODO add your handling code here:
-        tablita.setValueAt("hola", 0, 0);
-        tablita.setValueAt("2", 0, 2);
-        
+        //tablita.setValueAt("hola", 0, 0);
+        //tablita.setValueAt("2", 0, 2);
+
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void nombreActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActualizarActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_nombreActualizarActionPerformed
 
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
         Usuario u = new Usuario();
         u.setNombre(nombreActualizar.getText());
-        u.setEdad(Integer.parseInt(nombreActualizar.getText()));
-        u.setSueldo(Float.parseFloat(nombreActualizar.getText()));
-        if(JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: "+iDActualizar.getText()+"\nCon los datos:\n\n"+u)==0) System.out.println("SI act");
+        u.setEdad(Integer.parseInt(edadActualizar.getText()));
+        u.setSueldo(Float.parseFloat(sueldoActualizar.getText()));
+        if (JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: " + u.getNombre() + "\n Con los datos: \n\n" + u,"Actualizar",1) == 0) {
+            try {
+                p.usuarios.set(Integer.parseInt(iDActualizar.getText()), u);
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "El valor que estas intentando introducir es incorrecto", "Valor no permitido", 0);
+            }
+            
+        }
     }//GEN-LAST:event_ActualizarActionPerformed
 
     private void iDActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDActualizarActionPerformed
         // TODO add your handling code here:
-        if("".equals(iDActualizar.getText())==false){
+        if ("".equals(iDActualizar.getText()) == false) {
             nombreActualizar.setText(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getNombre());
             edadActualizar.setText(Integer.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getEdad()));
             sueldoActualizar.setText(Float.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getSueldo()));
@@ -598,16 +605,14 @@ public class InterfazUsuario extends javax.swing.JFrame {
             nombreActualizar.setEnabled(true);
             edadActualizar.setEnabled(true);
             sueldoActualizar.setEnabled(true);
-            
-        }
-        else{
+        } else {
             nombreActualizar.setEnabled(false);
             edadActualizar.setEnabled(false);
             sueldoActualizar.setEnabled(false);
             Actualizar.setEnabled(false);
         }
-        
-            
+
+
     }//GEN-LAST:event_iDActualizarActionPerformed
 
     private void iDEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDEliminarActionPerformed
@@ -655,13 +660,14 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                catch (NumberFormatException e) {
+                
+            }
             }
         });
-        
-        
+
     }
-    
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Actualizar;
