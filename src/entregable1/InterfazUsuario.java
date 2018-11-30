@@ -69,7 +69,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         iDBuscar = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablita = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -104,7 +104,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 102, 255));
-        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -269,7 +269,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel2.setText("Buscar");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablita.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -280,24 +280,17 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 "Index", "Nombre", "Edad", "Sueldo"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jTable2.setName(""); // NOI18N
-        jTable2.setOpaque(false);
-        jScrollPane2.setViewportView(jTable2);
+        tablita.setName(""); // NOI18N
+        tablita.setOpaque(false);
+        jScrollPane2.setViewportView(tablita);
 
         jLabel9.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel9.setText("Buscar");
@@ -326,7 +319,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         .addGap(433, 433, 433)
                         .addComponent(jLabel2))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
+                        .addGap(54, 54, 54)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -576,6 +569,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         // TODO add your handling code here:
+        tablita.setValueAt("hola", 0, 0);
+        tablita.setValueAt("2", 0, 2);
         
     }//GEN-LAST:event_BuscarActionPerformed
 
@@ -590,7 +585,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         u.setNombre(nombreActualizar.getText());
         u.setEdad(Integer.parseInt(nombreActualizar.getText()));
         u.setSueldo(Float.parseFloat(nombreActualizar.getText()));
-        if(JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: "+iDActualizar.getText()+"\nCon los datos:\n\n"+u)==1) System.out.println("SI act");
+        if(JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: "+iDActualizar.getText()+"\nCon los datos:\n\n"+u)==0) System.out.println("SI act");
     }//GEN-LAST:event_ActualizarActionPerformed
 
     private void iDActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDActualizarActionPerformed
@@ -708,8 +703,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTextField nombreActualizar;
     private javax.swing.JTextField sueldoActualizar;
+    private javax.swing.JTable tablita;
     // End of variables declaration//GEN-END:variables
 }
