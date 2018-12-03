@@ -33,7 +33,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
         p = new PersistenciaUsuario();
         p.usuarios = p.leer();
 //        t=new TableModel();
-        MostrarUsuarios = new JTable(t);
     }
 
     /**
@@ -104,7 +103,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 102, 255));
-        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -191,15 +190,114 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel7.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
-        jLabel7.setText("Mostrar todos los usuarios");
+        jLabel7.setText("Mostrar todos");
 
         MostrarUsuarios.setAutoCreateRowSorter(true);
         MostrarUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-
+                "ID", "Nombre", "Edad", "Sueldo"
             }
         ));
         MostrarUsuarios.setName(""); // NOI18N
@@ -221,15 +319,15 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
+                .addGap(12, 12, 12)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(176, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(228, 228, 228)
                 .addComponent(jLabel7)
-                .addGap(151, 151, 151))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,8 +336,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
+                    .addComponent(Mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -319,8 +417,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         .addGap(433, 433, 433)
                         .addComponent(jLabel2))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(71, 71, 71)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -331,20 +429,19 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addComponent(jLabel2)
                         .addGap(110, 110, 110)
-                        .addComponent(jLabel3)
-                        .addGap(46, 46, 46))
+                        .addComponent(jLabel3))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
                             .addComponent(iDBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                        .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Buscar por ID", jPanel4);
@@ -470,7 +567,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         });
 
         Eliminar.setFont(new java.awt.Font("sansserif", 3, 14)); // NOI18N
-        Eliminar.setText("Buscar");
+        Eliminar.setText("Eliminar");
         Eliminar.setToolTipText("Presione aqui para guardar un usuario con los valores insertados previamente");
         Eliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Eliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -487,32 +584,31 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(iDEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(194, 194, 194))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGap(276, 276, 276))))
+                .addContainerGap(280, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addGap(276, 276, 276))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(198, 198, 198)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(iDEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel16)
-                .addGap(54, 54, 54)
+                .addGap(87, 87, 87)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(iDEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Eliminar", jPanel5);
@@ -543,6 +639,8 @@ public class InterfazUsuario extends javax.swing.JFrame {
             Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(rootPane, "Uno o varios valores son incorrectos.\nIntente de nuevo.", "Valor no permitido", 0);
         }
     }//GEN-LAST:event_GuardarBActionPerformed
 
@@ -554,7 +652,12 @@ public class InterfazUsuario extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             for (Usuario u : p.leer()) {
-                System.out.println(u);
+                System.out.println(p.usuarios.indexOf(u));
+                MostrarUsuarios.setValueAt(p.usuarios.indexOf(u), p.usuarios.indexOf(u), 0);
+                MostrarUsuarios.setValueAt(u.getNombre(), p.usuarios.indexOf(u), 1);
+                MostrarUsuarios.setValueAt(u.getEdad(), p.usuarios.indexOf(u), 2);
+                MostrarUsuarios.setValueAt(u.getSueldo(), p.usuarios.indexOf(u), 3);
+
             }
         } catch (IOException ex) {
             Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
@@ -572,6 +675,20 @@ public class InterfazUsuario extends javax.swing.JFrame {
         //tablita.setValueAt("hola", 0, 0);
         //tablita.setValueAt("2", 0, 2);
 
+        try {
+
+            tablita.setValueAt(iDBuscar.getText(), 0, 0);
+            tablita.setValueAt(p.usuarios.get(Integer.parseInt(iDBuscar.getText())).getNombre(), 0, 1);
+            tablita.setValueAt(p.usuarios.get(Integer.parseInt(iDBuscar.getText())).getEdad(),0, 2);
+            tablita.setValueAt(p.usuarios.get(Integer.parseInt(iDBuscar.getText())).getSueldo(), 0, 3);
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, "El valor introducido en el campo es incorrecto, debe ser un numero entero", "¡Valor incorrecto!", 0);
+        } catch (IndexOutOfBoundsException e) {
+            JOptionPane.showMessageDialog(rootPane, "El usuario con el ID introducido no existe, intente con otro", "¡Usuario no encontrado!", 0);
+        }
+
+
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void nombreActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActualizarActionPerformed
@@ -582,16 +699,16 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
         Usuario u = new Usuario();
-        u.setNombre(nombreActualizar.getText());
-        u.setEdad(Integer.parseInt(edadActualizar.getText()));
-        u.setSueldo(Float.parseFloat(sueldoActualizar.getText()));
-        if (JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: " + u.getNombre() + "\n Con los datos: \n\n" + u,"Actualizar",1) == 0) {
+        if (JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: " + u.getNombre() + "\n Con los datos: \n\n" + u, "Actualizar", 1) == 0) {
             try {
+                u.setNombre(nombreActualizar.getText());
+                u.setEdad(Integer.parseInt(edadActualizar.getText()));
+                u.setSueldo(Float.parseFloat(sueldoActualizar.getText()));
                 p.usuarios.set(Integer.parseInt(iDActualizar.getText()), u);
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(rootPane, "El valor que estas intentando introducir es incorrecto", "Valor no permitido", 0);
             }
-            
+
         }
     }//GEN-LAST:event_ActualizarActionPerformed
 
@@ -621,6 +738,17 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
     private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
         // TODO add your handling code here:
+        if (JOptionPane.showConfirmDialog(rootPane, "Esta seguro que desar eliminar al usuario:\nCon los datos:\n" + p.usuarios.get(Integer.parseInt(iDEliminar.getText())), "Guardar", 0) == 0) {
+            try {
+                p.borrar(Integer.parseInt(iDEliminar.getText()));
+                JOptionPane.showMessageDialog(rootPane, "Usuario eliminado exitosamente", "Confirmacion", 1);
+            } catch (ClassNotFoundException ex) {
+                JOptionPane.showMessageDialog(rootPane, "No se pudo eliminar el usuario\n Error=01", "Error", 0);
+            } catch (IOException ex) {
+                Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(rootPane, "No se pudo eliminar el usuario\n Error=02", "Error", 0);
+            }
+        }
     }//GEN-LAST:event_EliminarActionPerformed
 
     /**
@@ -659,10 +787,10 @@ public class InterfazUsuario extends javax.swing.JFrame {
                     Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (NumberFormatException e) {
+
                 }
-                catch (NumberFormatException e) {
-                
-            }
+
             }
         });
 
