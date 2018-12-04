@@ -103,7 +103,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 102, 255));
-        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -154,9 +154,9 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(NombreText, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(50, 113, Short.MAX_VALUE)
+                .addGap(50, 121, Short.MAX_VALUE)
                 .addComponent(GuardarB, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(207, 207, 207)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -182,7 +182,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel6)
                             .addComponent(SueldoText, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(GuardarB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(195, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Guardar Usuarios", jPanel1);
@@ -320,7 +320,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -336,7 +336,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                    .addComponent(Mostrar, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -441,7 +441,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Buscar por ID", jPanel4);
@@ -524,7 +524,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(251, 251, 251)
                         .addComponent(jLabel10)))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -550,7 +550,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel13)
                             .addComponent(sueldoActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(Actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Actualizar", jPanel6);
@@ -584,7 +584,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(280, Short.MAX_VALUE)
+                .addContainerGap(295, Short.MAX_VALUE)
                 .addComponent(jLabel16)
                 .addGap(276, 276, 276))
             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -608,7 +608,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                     .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Eliminar", jPanel5);
@@ -617,13 +617,11 @@ public class InterfazUsuario extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 656, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 676, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+            .addComponent(jTabbedPane1)
         );
 
         pack();
@@ -657,7 +655,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 MostrarUsuarios.setValueAt(u.getNombre(), p.usuarios.indexOf(u), 1);
                 MostrarUsuarios.setValueAt(u.getEdad(), p.usuarios.indexOf(u), 2);
                 MostrarUsuarios.setValueAt(u.getSueldo(), p.usuarios.indexOf(u), 3);
-
             }
         } catch (IOException ex) {
             Logger.getLogger(InterfazUsuario.class.getName()).log(Level.SEVERE, null, ex);
@@ -679,7 +676,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
             tablita.setValueAt(iDBuscar.getText(), 0, 0);
             tablita.setValueAt(p.usuarios.get(Integer.parseInt(iDBuscar.getText())).getNombre(), 0, 1);
-            tablita.setValueAt(p.usuarios.get(Integer.parseInt(iDBuscar.getText())).getEdad(),0, 2);
+            tablita.setValueAt(p.usuarios.get(Integer.parseInt(iDBuscar.getText())).getEdad(), 0, 2);
             tablita.setValueAt(p.usuarios.get(Integer.parseInt(iDBuscar.getText())).getSueldo(), 0, 3);
 
         } catch (NumberFormatException e) {
@@ -699,34 +696,41 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
         Usuario u = new Usuario();
-        if (JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: " + u.getNombre() + "\n Con los datos: \n\n" + u, "Actualizar", 1) == 0) {
-            try {
-                u.setNombre(nombreActualizar.getText());
-                u.setEdad(Integer.parseInt(edadActualizar.getText()));
-                u.setSueldo(Float.parseFloat(sueldoActualizar.getText()));
-                p.usuarios.set(Integer.parseInt(iDActualizar.getText()), u);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(rootPane, "El valor que estas intentando introducir es incorrecto", "Valor no permitido", 0);
-            }
 
+        try {
+            u.setNombre(nombreActualizar.getText());
+            u.setEdad(Integer.parseInt(edadActualizar.getText()));
+            u.setSueldo(Float.parseFloat(sueldoActualizar.getText()));
+            if (JOptionPane.showConfirmDialog(rootPane, "Esta seguro que quiere actuelizr el usuario: " + u.getNombre() + "\n Con los datos: \n\n" + u, "Actualizar", 1) == 0) {
+                p.usuarios.set(Integer.parseInt(iDActualizar.getText()), u);
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, "El valor que estas intentando introducir es incorrecto", "Valor no permitido", 0);
         }
+
+
     }//GEN-LAST:event_ActualizarActionPerformed
 
     private void iDActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDActualizarActionPerformed
         // TODO add your handling code here:
-        if ("".equals(iDActualizar.getText()) == false) {
-            nombreActualizar.setText(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getNombre());
-            edadActualizar.setText(Integer.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getEdad()));
-            sueldoActualizar.setText(Float.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getSueldo()));
-            Actualizar.setEnabled(true);
-            nombreActualizar.setEnabled(true);
-            edadActualizar.setEnabled(true);
-            sueldoActualizar.setEnabled(true);
-        } else {
-            nombreActualizar.setEnabled(false);
-            edadActualizar.setEnabled(false);
-            sueldoActualizar.setEnabled(false);
-            Actualizar.setEnabled(false);
+        try {
+            if ("".equals(iDActualizar.getText()) == false) {
+                nombreActualizar.setText(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getNombre());
+                edadActualizar.setText(Integer.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getEdad()));
+                sueldoActualizar.setText(Float.toString(p.usuarios.get(Integer.parseInt(iDActualizar.getText())).getSueldo()));
+                Actualizar.setEnabled(true);
+                nombreActualizar.setEnabled(true);
+                edadActualizar.setEnabled(true);
+                sueldoActualizar.setEnabled(true);
+            } else {
+                nombreActualizar.setEnabled(false);
+                edadActualizar.setEnabled(false);
+                sueldoActualizar.setEnabled(false);
+                Actualizar.setEnabled(false);
+            }
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, "El valor que estas intentando introducir es incorrecto", "Valor no permitido", 0);
         }
 
 
